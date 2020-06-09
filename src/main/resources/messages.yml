@@ -1,0 +1,94 @@
+ingame_prefix: "[SimCard]"
+
+#   <message> => Message text
+#   <sender_display_name> / <receiver_display_name> => player's display name
+#   <sender_custom_name> / <receiver_custom_name> => player's custom name
+#   <sender_name> / <receiver_name> => player's name
+
+received_message_format: "<sender_display_name> to you: <message>"
+sent_message_format: "you to <receiver_display_name>: <message>"
+
+messages:
+  only_players_command:
+    text: "Only players can execute this command"
+    prefix_color: ""
+  invalid_permissions:
+    text: "&cInvalid Permissions!"
+    prefix_color: "&c"
+  msg_usage:
+    text: "&cCorrect usage: /msg <player name> <message>"
+    prefix_color: "&c"
+  getsim_usage:
+    text: "&cCorrect usage: /getsim <sim type>"
+    prefix_color: "&c"
+  getsim_type_error:
+    text: "&cSIM type doesn't exist"
+    prefix_color: "&c"
+  getsim_received:
+    text: "&aSIM received"
+    prefix_color: "&a"
+  expired_sim:
+    text: "&cYou finished all the messages of your SIM plan"
+    prefix_color: "&c"
+  consumed_message:
+    text: "&aYou got &6<remaining_messages> &aremaining messages"
+    prefix_color: "&a"
+  activated_sim:
+    text: "&aYou activated your SIM"
+    prefix_color: "&a"
+  already_activated_sim:
+    text: "&cYou already activated a SIM"
+    prefix_color: "&c"
+  no_activated_sim:
+    text: "&cYou haven't got any activated SIM yet!"
+    prefix_color: "&c"
+  invalid_player:
+    text: "&cInvalid player name"
+    prefix_color: "&c"
+  newsim_usage_1:
+    text: "&cCorrect usage: /newsim <SIM type> <remaining messages>"
+    prefix_color: "&c"
+  newsim_usage_2:
+    text: "&cYou need to hold an item in the main hand!"
+    prefix_color: "&c"
+  newsim_usage_3:
+    text: "&aNow write the SIM's display name in chat, use '&' for color codes, to undo the command type /newsim again"
+    prefix_color: "&a"
+  newsim_undo:
+    text: "&aCommand undone"
+    prefix: "&a"
+  newsim_success:
+    text: "&aSIM type successfully added"
+    prefix_color: "&a"
+  newsim_invalid_remaining_messages_value:
+    text: "&cInvalid remaining messages value"
+    prefix_color: "&c"
+  removesim_usage:
+    text: "&cCorrrect usage: /removesim <SIM type>"
+    prefix_color: "&c"
+  removesim_invalid:
+    text: "&cInvalid SIM type"
+    prefix_color: "&c"
+  removesim_success:
+    text: "&aSIM type removed"
+    prefix_color: "&a"
+
+keywords:
+  remaining_messages: "remaining messages"
+  expired: "expired"
+
+
+#gui:
+#  titles:
+#    select_horse: '&eSelect An Horse'
+#    main_page: '&eRides'
+#  buttons:
+#    select_horse:
+#      title: '&eSelect An Horse'
+#      lore: '&aA list of every horse possessed by you'
+#    send_back_horse:
+#      title: '&cSend Back'
+#      lore: '&aSend <HORSE_NAME> to the stable'
+#    help:
+#      title: '&eHelp'
+#      lore: '&aFor help digit /rideshelp'

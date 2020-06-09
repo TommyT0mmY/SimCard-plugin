@@ -1,0 +1,11 @@
+/bin/
+.classpath
+.settings
+target/
+Spigot/
+*.iml
+.idea/
+.project/
+src/test
+.idea/misc.xml
+SimCard.iml

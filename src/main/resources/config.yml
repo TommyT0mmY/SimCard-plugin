@@ -1,0 +1,4 @@
+feedback-consumed-message: true
+
+#configure ingame with /newsim and /removesim
+card-types: {}

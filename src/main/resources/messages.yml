@@ -76,19 +76,3 @@ messages:
 keywords:
   remaining_messages: "remaining messages"
   expired: "expired"
-
-
-#gui:
-#  titles:
-#    select_horse: '&eSelect An Horse'
-#    main_page: '&eRides'
-#  buttons:
-#    select_horse:
-#      title: '&eSelect An Horse'
-#      lore: '&aA list of every horse possessed by you'
-#    send_back_horse:
-#      title: '&cSend Back'
-#      lore: '&aSend <HORSE_NAME> to the stable'
-#    help:
-#      title: '&eHelp'
-#      lore: '&aFor help digit /rideshelp'

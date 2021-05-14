@@ -4,12 +4,16 @@ import com.github.tommyt0mmy.simcard.SimCard;
 import com.github.tommyt0mmy.simcard.cardmanager.CardData;
 import com.github.tommyt0mmy.simcard.cardmanager.CardManager;
 import com.github.tommyt0mmy.simcard.enums.Permissions;
+import litebans.api.Database;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.Optional;
+import java.util.UUID;
+
+import static com.google.gson.internal.bind.TypeAdapters.UUID;
 
 public class MsgCommand implements CommandExecutor
 {
@@ -30,6 +34,10 @@ public class MsgCommand implements CommandExecutor
         if (!p.hasPermission(Permissions.MSG.getNode())) //check permissions
         {
             p.sendMessage(simCardClass.messages.formattedChatMessage("invalid_permissions"));
+            return true;
+        }
+        if (Database.get().isPlayerMuted(p.getUniqueId(), "0.0.0.0")) {
+            p.sendMessage(simCardClass.messages.getChatMessage("messages.muted_player_error"));
             return true;
         }
 

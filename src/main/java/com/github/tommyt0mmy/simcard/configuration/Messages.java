@@ -34,6 +34,7 @@ public class Messages
             put("sent_message_format", "you to <receiver_display_name>: <message>");
             put("spy_message_format", "&c[Spy] <sender_display_name> -> <receiver_display_name> : <message>");
             //CHAT MESSAGES
+            put("messages.muted_player_error", "&cYou cannot use your phone as you have been muted!");
             put("messages.only_players_command.text", "Only players can execute this command");
             put("messages.only_players_command.prefix_color", "");
 

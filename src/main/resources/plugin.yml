@@ -5,6 +5,7 @@ authors: [N137, Soviet_PJ, Tommy_T0mmY]
 main: com.github.tommyt0mmy.simcard.SimCard
 prefix: SimCard
 softdepend: [PlaceholderAPI]
+depend: [LiteBans]
 api-version: 1.13
 commands:
   getsim:

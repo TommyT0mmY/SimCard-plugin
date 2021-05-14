@@ -32,7 +32,7 @@ public class Messages
             put("ingame_prefix", "[SimCard]");
             put("received_message_format", "<sender_display_name> to you: <message>");
             put("sent_message_format", "you to <receiver_display_name>: <message>");
-
+            put("spy_message_format", "&c[Spy] <sender_display_name> -> <receiver_display_name> : <message>");
             //CHAT MESSAGES
             put("messages.only_players_command.text", "Only players can execute this command");
             put("messages.only_players_command.prefix_color", "");
@@ -239,6 +239,18 @@ public class Messages
 
         return ChatColor.translateAlternateColorCodes('&', result);
     }
+
+    public String getSpyMessageFormat(Player sender, String message) //player to me
+    {
+        String result = messagesMap.get("spy_message_format");
+        result = result.replaceAll("<sender_display_name>", sender.getDisplayName());
+        result = result.replaceAll("<sender_custom_name>", sender.getCustomName());
+        result = result.replaceAll("<sender_name>", sender.getName());
+        result = result.replaceAll("<message>", message);
+
+        return ChatColor.translateAlternateColorCodes('&', result);
+    }
+
 
     public String getGuiButtonName(String buttonName)
     {

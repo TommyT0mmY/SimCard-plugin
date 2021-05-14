@@ -72,8 +72,8 @@ public class SimCard extends JavaPlugin
         getCommand("getsim").setExecutor(new GetsimCommand());
         getCommand("getsim").setTabCompleter(new GetsimTabCompleter());
 
-        getCommand("msg").setExecutor(new MsgCommand());
-        getCommand("msg").setTabCompleter(new MsgTabCompleter());
+        getCommand("phone").setExecutor(new MsgCommand());
+        getCommand("phone").setTabCompleter(new MsgTabCompleter());
 
         getCommand("newsim").setExecutor(new NewsimCommand());
 

@@ -71,6 +71,13 @@ public class MsgCommand implements CommandExecutor
         receiver.sendMessage(simCardClass.messages.getReceivedMessageFormat(p, message));
         sender.sendMessage(simCardClass.messages.getSentMessageFormat(receiver, message));
 
+        String finalMessage = message;
+        simCardClass.getServer().getOnlinePlayers().forEach(player -> {
+            if (player.hasPermission(Permissions.SPY.getNode())) {
+                player.sendMessage(simCardClass.messages.getSpyMessageFormat(player, finalMessage));
+            }
+        });
+
 
         CardManager.consumeMessage(p, cd_opt.get(), simCardClass.configs.isFeedback_consumed_message());
 

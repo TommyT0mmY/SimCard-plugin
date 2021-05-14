@@ -1,15 +1,16 @@
-name: SimCard
+name: xSimCard
 version: ${version}
 description: A roleplay plugin that implements sim cards to private message people
-author: Tommy_T0mmY
+authors: [N137, Soviet_PJ, Tommy_T0mmY]
 main: com.github.tommyt0mmy.simcard.SimCard
 prefix: SimCard
 softdepend: [PlaceholderAPI]
+api-version: 1.13
 commands:
   getsim:
     usage: "/<command> <SIM type>"
     description: "Receive a SIM"
-  msg:
+  phone:
     usage: "/<command> <player name> <message>"
     description: "Private message a player"
   newsim:

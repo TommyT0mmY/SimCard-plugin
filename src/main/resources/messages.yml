@@ -7,8 +7,10 @@ ingame_prefix: "[SimCard]"
 
 received_message_format: "<sender_display_name> to you: <message>"
 sent_message_format: "you to <receiver_display_name>: <message>"
+spy_message_format: "&c&o[SPY] <sender_name> ->  <receiver_name>: <message>"
 
 messages:
+  muted_player_error: "&cYou cannot use your phone as you have been muted!"
   only_players_command:
     text: "Only players can execute this command"
     prefix_color: ""
@@ -16,7 +18,7 @@ messages:
     text: "&cInvalid Permissions!"
     prefix_color: "&c"
   msg_usage:
-    text: "&cCorrect usage: /msg <player name> <message>"
+    text: "&cCorrect usage: /phone <player name> <message>"
     prefix_color: "&c"
   getsim_usage:
     text: "&cCorrect usage: /getsim <sim type>"

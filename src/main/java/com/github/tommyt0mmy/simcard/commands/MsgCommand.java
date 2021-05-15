@@ -4,12 +4,16 @@ import com.github.tommyt0mmy.simcard.SimCard;
 import com.github.tommyt0mmy.simcard.cardmanager.CardData;
 import com.github.tommyt0mmy.simcard.cardmanager.CardManager;
 import com.github.tommyt0mmy.simcard.enums.Permissions;
+import litebans.api.Database;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.Optional;
+import java.util.UUID;
+
+import static com.google.gson.internal.bind.TypeAdapters.UUID;
 
 public class MsgCommand implements CommandExecutor
 {
@@ -70,6 +74,13 @@ public class MsgCommand implements CommandExecutor
 
         receiver.sendMessage(simCardClass.messages.getReceivedMessageFormat(p, message));
         sender.sendMessage(simCardClass.messages.getSentMessageFormat(receiver, message));
+
+        String finalMessage = message;
+        simCardClass.getServer().getOnlinePlayers().forEach(player -> {
+            if (player.hasPermission(Permissions.SPY.getNode())) {
+                player.sendMessage(simCardClass.messages.getSpyMessageFormat(player, finalMessage));
+            }
+        });
 
 
         CardManager.consumeMessage(p, cd_opt.get(), simCardClass.configs.isFeedback_consumed_message());

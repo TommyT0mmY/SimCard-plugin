@@ -6,6 +6,7 @@ public enum Permissions
     MSG("msg"),
     ACTIVATESIM("activatesim"),
     NEWSIM("newsim"),
+    SPY("spy"),
     REMOVESIM("removesim");
 
     private String node;

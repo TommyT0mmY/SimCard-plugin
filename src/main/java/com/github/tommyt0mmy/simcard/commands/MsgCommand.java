@@ -36,10 +36,6 @@ public class MsgCommand implements CommandExecutor
             p.sendMessage(simCardClass.messages.formattedChatMessage("invalid_permissions"));
             return true;
         }
-        if (Database.get().isPlayerMuted(p.getUniqueId(), "0.0.0.0")) {
-            p.sendMessage(simCardClass.messages.getChatMessage("messages.muted_player_error"));
-            return true;
-        }
 
         if (args.length < 2) //check correct usage
         {

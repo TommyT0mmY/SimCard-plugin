@@ -241,12 +241,17 @@ public class Messages
         return ChatColor.translateAlternateColorCodes('&', result);
     }
 
-    public String getSpyMessageFormat(Player sender, String message) //player to me
+    public String getSpyMessageFormat(Player sender, Player receiver, String message) //player to me
     {
         String result = messagesMap.get("spy_message_format");
         result = result.replaceAll("<sender_display_name>", sender.getDisplayName());
         result = result.replaceAll("<sender_custom_name>", sender.getCustomName());
         result = result.replaceAll("<sender_name>", sender.getName());
+        result = result.replaceAll("<message>", message);
+
+        result = result.replaceAll("<receiver_display_name>", receiver.getDisplayName());
+        result = result.replaceAll("<receiver_custom_name>", receiver.getCustomName());
+        result = result.replaceAll("<receiver_name>", receiver.getName());
         result = result.replaceAll("<message>", message);
 
         return ChatColor.translateAlternateColorCodes('&', result);

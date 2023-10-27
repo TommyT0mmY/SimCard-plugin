@@ -11,6 +11,7 @@ import com.github.tommyt0mmy.simcard.events.ActivateSim;
 import com.github.tommyt0mmy.simcard.tabcompleters.GetsimTabCompleter;
 import com.github.tommyt0mmy.simcard.tabcompleters.MsgTabCompleter;
 import com.github.tommyt0mmy.simcard.tabcompleters.RemovesimTabCompleter;
+import litebans.api.Database;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -60,6 +61,8 @@ public class SimCard extends JavaPlugin
         if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
             new PlaceholderapiExpansion(this).register();
         }
+
+
     }
 
     public void onDisable()
@@ -72,8 +75,8 @@ public class SimCard extends JavaPlugin
         getCommand("getsim").setExecutor(new GetsimCommand());
         getCommand("getsim").setTabCompleter(new GetsimTabCompleter());
 
-        getCommand("msg").setExecutor(new MsgCommand());
-        getCommand("msg").setTabCompleter(new MsgTabCompleter());
+        getCommand("phone").setExecutor(new MsgCommand());
+        getCommand("phone").setTabCompleter(new MsgTabCompleter());
 
         getCommand("newsim").setExecutor(new NewsimCommand());
 
